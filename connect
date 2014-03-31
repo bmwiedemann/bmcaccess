@@ -1,0 +1,5 @@
+#!/bin/sh
+ip=$1
+tmp=/dev/shm/$$
+./getjnlp.pl $ip > $tmp && javaws $tmp
+rm -f $tmp
